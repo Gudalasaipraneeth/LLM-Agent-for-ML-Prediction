@@ -6,7 +6,7 @@ A project demonstrating an LLM-based AI agent that autonomously plans, codes, de
 ### Problem Statement
 
 The goal, as defined in the assignment,  was to:
->"Given survey results in the past 3 days in a specific state in U.S., then predict the percentage of new tested positive cases in the 3rd day." [cite: 16]
+>"Given survey results in the past 3 days in a specific state in U.S., then predict the percentage of new tested positive cases in the 3rd day."
 
 The evaluation metric is Mean Squared Error (MSE), with a "strong baseline" score set at **0.84773**.
 
@@ -20,10 +20,6 @@ The agent's workflow:
 3.  **Executing:** Run the code and capture the results or errors.
 4. **Debugging / Improving:** If the code fails or the MSE is high, the agent analyzes the feedback and *iteratively writes a new, better solution*.
 
-I improved the agent's performance by:
-***Prompt Engineering:** Modifying the system prompts to give the agent better instructions.
-***Feature Selection:** Providing the agent with descriptions of all data features, so it could make better decisions.
-* **Iteration:** Setting the agent to run for 8 steps, generating 3 initial "drafts" and using the remaining 5 cycles to debug and improve its solutions.
 
 ### Results: Beating the Strong Baseline
 
