@@ -5,24 +5,24 @@ A project demonstrating an LLM-based AI agent that autonomously plans, codes, de
 
 ### Problem Statement
 
-[cite_start]The goal, as defined in the assignment[cite: 14], was to:
-> [cite_start]"Given survey results in the past 3 days in a specific state in U.S., then predict the percentage of new tested positive cases in the 3rd day." [cite: 16]
+The goal, as defined in the assignment,  was to:
+>"Given survey results in the past 3 days in a specific state in U.S., then predict the percentage of new tested positive cases in the 3rd day." [cite: 16]
 
-[cite_start]The evaluation metric is Mean Squared Error (MSE) [cite: 165][cite_start], with a "strong baseline" score set at **0.84773**[cite: 168].
+The evaluation metric is Mean Squared Error (MSE), with a "strong baseline" score set at **0.84773**.
 
 ### My Approach: The AI Agent
 
-[cite_start]Instead of manually building a model, I used the AIDE (AI-Driven Exploration) framework[cite: 59]. I configured and guided an LLM agent to act as a data scientist.
+Instead of manually building a model, I used the AIDE (AI-Driven Exploration) framework. I configured and guided an LLM agent to act as a data scientist.
 
-[cite_start]The agent's workflow[cite: 50]:
+The agent's workflow:
 1.  **Planning:** Analyze the problem and propose a solution.
 2.  **Coding:** Write the Python code for data preprocessing, feature engineering, and modeling.
 3.  **Executing:** Run the code and capture the results or errors.
-4.  [cite_start]**Debugging / Improving:** If the code fails or the MSE is high, the agent analyzes the feedback and *iteratively writes a new, better solution*.
+4. **Debugging / Improving:** If the code fails or the MSE is high, the agent analyzes the feedback and *iteratively writes a new, better solution*.
 
 I improved the agent's performance by:
-* [cite_start]**Prompt Engineering:** Modifying the system prompts to give the agent better instructions[cite: 171].
-* [cite_start]**Feature Selection:** Providing the agent with descriptions of all data features [cite: 172, 360] so it could make better decisions.
+***Prompt Engineering:** Modifying the system prompts to give the agent better instructions.
+***Feature Selection:** Providing the agent with descriptions of all data features, so it could make better decisions.
 * **Iteration:** Setting the agent to run for 8 steps, generating 3 initial "drafts" and using the remaining 5 cycles to debug and improve its solutions.
 
 ### Results: Beating the Strong Baseline
@@ -30,7 +30,7 @@ I improved the agent's performance by:
 The autonomous agent successfully generated, debugged, and optimized a solution.
 
 * **Final Testing MSE:** **0.5107**
-* [cite_start]**Baseline Comparison:** This result significantly beats the "strong baseline" requirement of **0.84773**[cite: 168].
+***Baseline Comparison:** This result significantly beats the "strong baseline" requirement of **0.84773**.
 
 This project demonstrates the power of modern LLM agents in automating complex data science workflows.
 
